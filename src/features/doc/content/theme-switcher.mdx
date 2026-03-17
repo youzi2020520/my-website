@@ -1,0 +1,80 @@
+---
+title: 主题切换器
+description: 在 Next.js 应用中切换系统主题、浅色主题和深色主题。
+image: https://assets.chanhdai.com/images/blog/theme-switcher-component.webp
+category: components
+createdAt: 2025-04-11
+updatedAt: 2026-02-12
+---
+
+
+<ComponentPreview
+  name="theme-switcher-demo"
+  openInV0Url="https://chanhdai.com/r/theme-switcher.json"
+/>
+
+## 安装
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ncdai/theme-switcher
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>安装以下依赖</Step>
+
+```bash
+npm install next-themes lucide-react motion clsx tailwind-merge
+```
+
+<Step>添加 cn 辅助函数</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>将以下代码复制并粘贴到您的项目中</Step>
+
+<ComponentSource
+  name="theme-switcher"
+  title="components/theme-switcher.tsx"
+  showLineNumbers
+/>
+
+<Step>更新导入路径以匹配您的项目设置</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## 用法
+
+```tsx
+import { ThemeSwitcher } from "@/components/theme-switcher"
+```
+
+```tsx
+<ThemeSwitcher />
+```
+
+## 参考资料
+
+- https://ui.shadcn.com/docs/registry
+- https://ui.shadcn.com/docs/dark-mode/next
+- https://github.com/pacocoursey/next-themes
+- https://motion.dev/docs/react-motion-component

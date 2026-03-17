@@ -1,0 +1,7 @@
+{
+    "AI.toolcall.v2.ide.command.mode": "whitelist",
+    "AI.toolcall.v2.solo.command.mode": "whitelist",
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.selectedModel": "MiniMax-M2.5",
+    "diffEditor.maxComputationTime": 0
+}

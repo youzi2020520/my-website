@@ -1,0 +1,93 @@
+---
+title: 闪烁文字
+description: 平滑的、文字上光扫过的闪烁动画。
+image: https://assets.chanhdai.com/images/blog/shimmering-text.webp
+category: components
+createdAt: 2025-11-02
+updatedAt: 2026-02-20
+---
+
+<ComponentPreview
+  name="shimmering-text-demo-01"
+  openInV0Url="https://chanhdai.com/r/shimmering-text.json"
+  remountOnThemeChange
+/>
+
+## 安装
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ncdai/shimmering-text
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>安装以下依赖</Step>
+
+```bash
+npm install motion clsx tailwind-merge
+```
+
+<Step>添加 cn 辅助函数</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>将以下代码复制并粘贴到您的项目中</Step>
+
+<ComponentSource
+  name="shimmering-text"
+  title="components/shimmering-text.tsx"
+  showLineNumbers
+/>
+
+<Step>更新导入路径以匹配您的项目设置</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## 用法
+
+```tsx
+import { ShimmeringText } from "@/components/shimmering-text"
+```
+
+```tsx
+<ShimmeringText text="滑动解锁" />
+```
+
+## API 参考
+
+### ShimmeringText
+
+<AutoTypeTable
+  path="src/features/doc/content/props.ts"
+  name="ShimmeringTextProps"
+/>
+
+## 示例
+
+### 自定义颜色
+
+<ComponentPreview name="shimmering-text-demo-02" remountOnThemeChange />
+
+CSS 变量说明：
+
+- `--color`：基础文字颜色（文字的默认/静止状态）
+- `--shimmering-color`：峰值高亮颜色（闪烁效果中文字过渡到的明亮颜色）

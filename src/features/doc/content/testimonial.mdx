@@ -1,0 +1,106 @@
+---
+title: 用户评价
+description: 展示用户反馈，包含作者信息、头像和已验证徽章。
+image: https://assets.chanhdai.com/images/blog/testimonial.webp
+category: components
+createdAt: 2026-02-08
+updatedAt: 2026-02-08
+---
+
+<ComponentPreview
+  name="testimonial-demo"
+  openInV0Url="https://chanhdai.com/r/testimonial.json"
+/>
+
+## 安装
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ncdai/testimonial
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>安装以下依赖</Step>
+
+```bash
+npm install clsx tailwind-merge
+```
+
+<Step>添加 cn 辅助函数</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>将以下代码复制并粘贴到您的项目中</Step>
+
+<ComponentSource
+  name="testimonial"
+  title="components/testimonial.tsx"
+  showLineNumbers
+/>
+
+<Step>更新导入路径以匹配您的项目设置</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## 用法
+
+```tsx
+import {
+  Testimonial,
+  TestimonialAuthor,
+  TestimonialAuthorTagline,
+  TestimonialAuthorInfo,
+  TestimonialAuthorName,
+  TestimonialAvatar,
+  TestimonialAvatarImg,
+  TestimonialAvatarRing,
+  TestimonialQuote,
+  TestimonialVerifiedBadge,
+} from "@/components/testimonial"
+```
+
+```tsx
+<MarqueeItem>
+  <Testimonial>
+    <TestimonialQuote />
+
+    <TestimonialAuthor>
+      <TestimonialAvatar>
+        <TestimonialAvatarImg />
+        <TestimonialAvatarRing />
+      </TestimonialAvatar>
+
+      <TestimonialAuthorName>
+        <TestimonialVerifiedBadge />
+      </TestimonialAuthorName>
+
+      <TestimonialAuthorTagline />
+    </TestimonialAuthor>
+  </Testimonial>
+</MarqueeItem>
+```
+
+## 示例
+
+### 用户评价轮播
+
+https://chanhdai.com/components/testimonials-marquee

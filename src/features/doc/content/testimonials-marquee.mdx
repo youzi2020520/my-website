@@ -1,0 +1,152 @@
+---
+title: 用户评价轮播
+description: 滚动轮播展示用户评价。
+image: https://assets.chanhdai.com/images/blog/testimonials-marquee.webp?v=2
+category: components
+createdAt: 2025-11-02
+updatedAt: 2025-11-22
+---
+
+<ComponentPreview
+  className="**:data-[slot=buttons]:pr-2 **:data-[slot=preview]:px-0"
+  name="testimonials-marquee-demo-01"
+  openInV0Url="https://chanhdai.com/r/testimonials-marquee.json"
+/>
+
+## 特性
+
+- 带淡入淡出边缘的连续滚动轮播。
+- 单行和多行布局。
+- 可与 Testimonial 组件组合使用。
+
+## 安装
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ncdai/testimonials-marquee
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>安装以下依赖</Step>
+
+```bash
+npm install clsx tailwind-merge react-fast-marquee
+```
+
+<Step>添加 cn 辅助函数</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>将以下代码复制并粘贴到您的项目中</Step>
+
+<ComponentSource
+  name="testimonial"
+  title="components/testimonial.tsx"
+  showLineNumbers
+/>
+
+<ComponentSource
+  src="src/components/kibo-ui/marquee/index.tsx"
+  title="components/kibo-ui/marquee/index.tsx"
+  showLineNumbers
+/>
+
+<Step>更新导入路径以匹配您的项目设置</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## 用法
+
+```tsx
+import {
+  Marquee,
+  MarqueeContent,
+  MarqueeFade,
+  MarqueeItem,
+} from "@/components/kibo-ui/marquee"
+
+import {
+  Testimonial,
+  TestimonialAuthor,
+  TestimonialAuthorTagline,
+  TestimonialAuthorInfo,
+  TestimonialAuthorName,
+  TestimonialAvatar,
+  TestimonialAvatarImg,
+  TestimonialAvatarRing,
+  TestimonialQuote,
+  TestimonialVerifiedBadge,
+} from "@/components/testimonial"
+```
+
+```tsx
+<Marquee>
+  <MarqueeFade />
+  <MarqueeFade />
+
+  <MarqueeContent>
+    <MarqueeItem>
+      <Testimonial>
+        <TestimonialQuote />
+
+        <TestimonialAuthor>
+          <TestimonialAvatar>
+            <TestimonialAvatarImg />
+            <TestimonialAvatarRing />
+          </TestimonialAvatar>
+
+          <TestimonialAuthorName>
+            <TestimonialVerifiedBadge />
+          </TestimonialAuthorName>
+
+          <TestimonialAuthorTagline />
+        </TestimonialAuthor>
+      </Testimonial>
+    </MarqueeItem>
+    ...
+    <MarqueeItem />
+    <MarqueeItem />
+    <MarqueeItem />
+  </MarqueeContent>
+</Marquee>
+```
+
+## API 参考
+
+- [Marquee](https://www.kibo-ui.com/components/marquee)
+- [React FAST Marquee](https://www.react-fast-marquee.com)
+
+## 示例
+
+### 单行
+
+<ComponentPreview
+  className="**:data-[slot=buttons]:pr-2 **:data-[slot=preview]:px-0"
+  name="testimonials-marquee-demo-01"
+/>
+
+### 多行
+
+<ComponentPreview
+  className="**:data-[slot=buttons]:pr-2 **:data-[slot=preview]:px-0"
+  name="testimonials-marquee-demo-02"
+/>

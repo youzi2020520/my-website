@@ -1,0 +1,65 @@
+---
+title: 触感反馈
+description: 在移动设备上触发触感反馈。
+image: https://assets.chanhdai.com/images/blog/haptic.webp
+category: components
+new: true
+createdAt: 2026-03-01
+updatedAt: 2026-03-03
+---
+
+<ComponentPreview className="**:data-[slot=preview]:p-0" name="haptic-demo" />
+
+## 特性
+
+- 在 Android 上使用 [Vibration API](https://developer.mozilla.org/docs/Web/API/Vibration_API)，在 iOS 上使用 checkbox 技巧。
+- 支持在 Android 设备上自定义持续时间和振动模式。
+- 触感功能灵感来自 [Vercel](https://vercel.com) 的移动端体验。
+
+## 安装
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ncdai/haptic
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>将以下代码复制并粘贴到您的项目中</Step>
+
+<ComponentSource name="haptic" title="lib/haptic.ts" showLineNumbers />
+
+<Step>更新导入路径以匹配您的项目设置</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## 用法
+
+```tsx
+import { haptic } from "@/lib/haptic"
+```
+
+```tsx
+<Button onClick={() => haptic()}>Haptic</Button>
+```
+
+<Callout>
+  触感反馈不应随意使用。关于最佳实践，请参阅 Apple 人机界面指南中的[播放触感](https://developer.apple.com/design/human-interface-guidelines/playing-haptics)。
+</Callout>
+
+## API 参考
+
+<AutoTypeTable path="src/features/doc/content/props.ts" name="HapticProps" />

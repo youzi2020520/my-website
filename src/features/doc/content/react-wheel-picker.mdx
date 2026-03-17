@@ -1,0 +1,133 @@
+---
+title: React 轮盘选择器
+description: iOS 风格的 React 轮盘选择器，支持平滑惯性滚动和无限循环滚动。
+image: https://assets.chanhdai.com/images/blog/react-wheel-picker.webp?t=1747747932
+category: components
+createdAt: 2025-05-16
+updatedAt: 2026-02-08
+---
+
+<ComponentPreview
+  name="wheel-picker-demo"
+  openInV0Url="https://chanhdai.com/r/wheel-picker.json"
+/>
+
+## 特性
+
+基于 [React 轮盘选择器](https://react-wheel-picker.chanhdai.com) 构建。
+
+- 自然触控滚动，带平滑惯性效果，支持桌面端鼠标拖拽和滚动。
+- 无限循环滚动。
+- 无样式核心，支持完全自定义样式。
+- 完整的键盘导航和即时搜索功能。
+
+## 安装
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ncdai/wheel-picker
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>安装以下依赖</Step>
+
+```bash
+npm install @ncdai/react-wheel-picker clsx tailwind-merge
+```
+
+<Step>添加 cn 辅助函数</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>将以下代码复制并粘贴到您的项目中</Step>
+
+<ComponentSource
+  name="wheel-picker"
+  title="components/wheel-picker.tsx"
+  showLineNumbers
+/>
+
+<Step>更新导入路径以匹配您的项目设置</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## 用法
+
+```tsx
+import {
+  WheelPicker,
+  WheelPickerWrapper,
+  type WheelPickerOption,
+} from "@/components/wheel-picker"
+```
+
+```tsx
+const options: WheelPickerOption[] = [
+  {
+    label: "React",
+    value: "react",
+  },
+  {
+    label: "Vue",
+    value: "vue",
+  },
+  {
+    label: "Angular",
+    value: "angular",
+    disabled: true,
+  },
+  {
+    label: "Svelte",
+    value: "svelte",
+  },
+]
+
+export function WheelPickerDemo() {
+  const [value, setValue] = useState("react")
+
+  return (
+    <WheelPickerWrapper>
+      <WheelPicker options={options} value={value} onValueChange={setValue} />
+    </WheelPickerWrapper>
+  )
+}
+```
+
+查看 [React 轮盘选择器](https://react-wheel-picker.chanhdai.com/docs/getting-started) 文档了解更多信息。
+
+## 示例
+
+### 多个选择器，无限循环
+
+<ComponentPreview
+  className="mt-4"
+  name="wheel-picker-demo"
+  openInV0Url="https://chanhdai.com/r/wheel-picker.json"
+/>
+
+### React Hook Form
+
+<ComponentPreview
+  className="mt-4"
+  name="wheel-picker-form-demo"
+  openInV0Url="https://chanhdai.com/r/wheel-picker.json"
+/>

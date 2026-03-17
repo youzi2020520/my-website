@@ -1,0 +1,104 @@
+---
+title: 复制按钮
+description: 复制文本到剪贴板，带有视觉反馈和动画效果。
+image: https://assets.chanhdai.com/images/blog/copy-button.webp
+category: components
+new: true
+createdAt: 2026-02-09
+updatedAt: 2026-03-01
+---
+
+<ComponentPreview
+  className="**:data-[slot=component-preview]:min-h-40"
+  name="copy-button-demo"
+  openInV0Url="https://chanhdai.com/r/copy-button.json"
+/>
+
+## 特性
+
+- 使用 Motion 实现平滑的图标过渡和动画状态变化。
+- 三种不同状态的视觉反馈：空闲、成功和错误。
+- 接受字符串或函数以实现动态内容。
+- 支持成功和错误事件的回调。
+
+## 安装
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ncdai/copy-button
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>安装以下依赖</Step>
+
+```bash
+npm install clsx tailwind-merge class-variance-authority lucide-react motion radix-ui
+```
+
+<Step>添加 cn 辅助函数</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>安装所需的组件</Step>
+
+- [Button](https://ui.shadcn.com/docs/components/button)
+
+<Step>将以下代码复制并粘贴到您的项目中</Step>
+
+<ComponentSource
+  src="src/hooks/use-copy-to-clipboard.ts"
+  title="hooks/use-copy-to-clipboard.ts"
+  showLineNumbers
+/>
+
+<ComponentSource
+  name="copy-button"
+  title="components/copy-button.tsx"
+  showLineNumbers
+/>
+
+<Step>更新导入路径以匹配您的项目设置</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## 用法
+
+```tsx
+import { CopyButton } from "@/components/copy-button"
+```
+
+```tsx
+<CopyButton text="Some text to copy" />
+```
+
+## API 参考
+
+### CopyButton
+
+在 [Button](https://ui.shadcn.com/docs/components/radix/button) 基础上扩展了剪贴板功能。
+
+<AutoTypeTable
+  path="src/features/doc/content/props.ts"
+  name="CopyButtonProps"
+/>
+
+查看 [shadcn/ui](https://ui.shadcn.com/docs/components/radix/button#api-reference) 文档了解更多信息。
