@@ -22,6 +22,11 @@ import { addQueryParams } from "@/utils/url"
 
 import type { Project } from "../../types/projects"
 
+function formatDate(dateStr: string): string {
+  const [year, month, day] = dateStr.split("-")
+  return `${year}年${month}月${day}日`
+}
+
 export function ProjectItem({
   className,
   project,
@@ -63,7 +68,7 @@ export function ProjectItem({
               <dl className="text-sm text-muted-foreground">
                 <dt className="sr-only">Period</dt>
                 <dd className="flex items-center gap-0.5">
-                  <span>{start}</span>
+                  <span>{formatDate(start)}</span>
                   {!isSinglePeriod && (
                     <>
                       <span className="font-mono">—</span>
@@ -73,7 +78,7 @@ export function ProjectItem({
                           <span className="sr-only">Present</span>
                         </>
                       ) : (
-                        <span>{end}</span>
+                        <span>{formatDate(end)}</span>
                       )}
                     </>
                   )}

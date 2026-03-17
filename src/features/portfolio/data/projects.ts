@@ -2,239 +2,118 @@ import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
-    id: "react-wheel-picker",
-    title: "React 轮盘选择器",
+    id: "skewpro",
+    title: "SkewPro透视变形",
     period: {
-      start: "05.2025",
+      start: "2026-02-11",
     },
-    link: "https://react-wheel-picker.chanhdai.com",
+    link: "https://www.figma.com/community/plugin/1603231345170114806/skewpro",
     skills: [
+      "figma",
+      "插件",
       "开源",
       "React",
       "TypeScript",
-      "Monorepo",
-      "Turborepo",
-      "pnpm-workspace",
-      "NPM 包发布",
-      "NPM 注册表",
-      "GitHub Actions",
     ],
-    description: `iOS 风格的 React 轮盘选择器，支持平滑惯性滚动和无限循环滚动。获得 [▲Vercel 开源计划](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker) 支持
-- 自然触控滚动，带平滑惯性效果，支持桌面端鼠标拖拽和滚动
-- 无限循环滚动
-- 无样式核心，支持完全自定义样式
-- 完整的键盘导航和即时搜索功能
-`,
+    description: `SkewPro 透视变形 是一款专为 Figma 设计师打造的高级图像变形工具。不同于传统的斜切工具，它通过非线性透视算法，让您可以像在专业 3D 软件中一样，通过四个角点自由定义图片的透视关系。
+- 非线性透视变形：通过自由拖动四个角点，实现真正的空间透视效果，突破了传统工具只能进行简单斜切的限制。
+- 智能等轴测预设：一键快捷预设：提供专业级的等轴测位面。等轴测左视图、等轴测俯视、等轴测俯视、等轴测右视图。
+- 高级交互体验：高清渲染引擎、视窗自由控制。
+- 专业级导出系统：多倍分辨率导出，支持 1x / 2x / 4x 三种导出选项。
+- 完整历史流管理：支持多步撤销与重做，让您可以放心地尝试各种变形效果。`,
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
     isExpanded: true,
   },
   {
     id: "chanhdaidotcom",
-    title: "chanhdai.com",
+    title: "Hue magic 色相魔法师",
     period: {
-      start: "01.2025",
+      start: "2026-01-04",
     },
-    link: "https://github.com/ncdai/chanhdai.com",
+    link: "https://www.figma.com/community/plugin/1588002133581484761/hue-magic",
     skills: [
+      "figma",
+      "插件",
       "开源",
-      "Next.js 16",
-      "Tailwind CSS v4",
-      "Radix UI",
-      "Motion",
-      "shadcn/ui",
-      "shadcn 注册表",
-      "Vercel",
+      "TypeScript",
     ],
     description:
-      "一个极简、像素完美的开发者作品集，shadcn 注册表和博客。",
+      "这是一款专业的Figma颜色编辑插件，通过直观的色轮界面帮助设计师快速调整图形的色相、饱和度和亮度。\n- 动态颜色点显示：自动识别选中图层的所有颜色属性（填充、描边、投影）\n- 多图层支持：同时选中多个图层，每个图层的颜色点独立显示\n- 去饱和按钮：一键将所有颜色变成灰色（饱和度=0）",
     logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
   },
   {
     id: "quaricdotcom",
-    title: "quaric.com",
+    title: "GhostTrace 快速矢量化",
     period: {
-      start: "03.2024",
+      start: "2026-02-06",
     },
-    link: "https://quaric.com",
+    link: "https://www.figma.com/community/plugin/1601537468395452547/ghosttrace",
     skills: [
-      "公司项目",
-      "Next.js 15",
-      "Tailwind CSS v3",
-      "shadcn/ui",
-      "Strapi 5",
-      "VNPAY-QR",
-      "Docker",
-      "Docker Compose",
-      "NGINX",
+      "figma",
+      "插件",
+      "开源",
+      "个人开发",
     ],
+    description: `GhostTrace 是一款专为 Figma 设计的高性能，专业级图像矢量化插件。它能够将位图（PNG/JPG）一键转换为精细的矢量路径（SVG），并提供媲美 Figma 原生体验的交互界面。
+三大专业模式：
+- 全彩 (Color)：保留原始色彩分层，适合照片级矢量化。
+- 灰度 (Gray)：提取明暗层次，适合艺术处理。
+- 黑白 (B&W/Silhouette)：一键生成纯黑白轮廓，并自动剔除白色背景，完美适配 Logo 和插画转换。`,
     logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
   },
   {
     id: "zadark",
-    title: "ZaDark",
+    title: "chouzhen.websyc.tech",
     period: {
-      start: "01.2022",
+      start: "2026-02-16",
     },
-    link: "https://zadark.com",
+    link: "https://chouzhen.websyc.tech",
     skills: [
       "个人项目",
+      "网站",
       "开源",
-      "浏览器扩展",
-      "CLI",
-      "Docusaurus 3",
+      "Html",
     ],
-    description: `ZaDark 为 Zalo 网页版和桌面版添加深色模式、防偷窥、可自定义字体、背景等功能。
-- 通过付费 Safari 扩展获得 1000 万越南盾以上净收入*
-- 在 SourceForge 上获得 8 万以上下载量（被 SourceForge 授予社区领袖徽章）
-- 通过 Chrome 网上应用店获得 3 万以上活跃用户*
-- 铜牌 — 第十届设计、制造与应用竞赛 2022
-
-<p class="text-muted-foreground">* 峰值指标记录；实际当前数字可能有所不同。</p>
-`,
+    description: `专业的AI视频抽帧与调色工具，帮助创作者从视频中智能提取高质量帧图像，支持AI场景检测，智能调色和多种专业滤镜效果。`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
   {
     id: "qabox",
-    title: "QABox",
+    title: "clover.websyc.tech",
     period: {
-      start: "07.2023",
-      end: "07.2023",
+      start: "2026-01-20",
     },
-    link: "https://github.com/ncdai/qabox",
+    link: "https://clover.websyc.tech",
     skills: [
-      "大学项目",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
+      "个人项目",
+      "开源",
+      "网站",
+      "Html",
     ],
     description:
-      "- 课程：分布式应用 — FIT@HCMUS\n- 项目得分：10/10\n- 源代码：https://github.com/ncdai/qabox",
+      "网站为个人网站已上线，对于AI初级尝试。",
   },
   {
     id: "taskbox",
-    title: "TaskBox",
+    title: "AI 视频剪辑助手",
     period: {
-      start: "07.2023",
-      end: "07.2023",
+      start: "2026-01-23",
     },
-    link: "https://github.com/ncdai/taskbox",
+    link: "",
     skills: [
-      "大学项目",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
+      "个人开发",
+      "AI",
+      "LLM",
+      "Python",
+      "claude code",
+      "trae",
+      "gemini",
     ],
-    description:
-      "- 课程：分布式应用 — FIT@HCMUS\n- 项目得分：10/10\n- 源代码：https://github.com/ncdai/taskbox",
-  },
-  {
-    id: "daichat-app",
-    title: "DaiChat 应用",
-    period: {
-      start: "07.2020",
-      end: "07.2020",
-    },
-    link: "https://www.youtube.com/watch?v=H5U3J_W1low",
-    skills: ["大学项目", "Java", "Java Swing", "Java 网络编程"],
-    description: `- 课程：Java 应用编程 — FIT@HCMUS
-- 要求：使用 Java 技术开发实时聊天应用程序
-- 项目得分：10/10
-- 源代码：
-  - 服务器：https://github.com/ncdai/ltudjava-summer2020-chatapp_server
-  - 客户端：https://github.com/ncdai/ltudjava-summer2020-chatapp_client`,
-  },
-  {
-    id: "qlsv-app",
-    title: "QLSV 应用",
-    period: {
-      start: "06.2020",
-      end: "06.2020",
-    },
-    link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
-    skills: ["大学项目", "Java", "Java Swing", "Hibernate", "MySQL"],
-    description: `- 课程：Java 应用编程 — FIT@HCMUS
-- 要求：使用 Java 技术构建具有基于角色功能的学生管理系统
-- 项目得分：10/10
-- 源代码：https://github.com/ncdai/ltudjava-summer2020-hibernate`,
-  },
-  {
-    id: "penphy",
-    title: "Penphy",
-    period: {
-      start: "01.2019",
-      end: "08.2019",
-    },
-    link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
-    skills: ["创业项目", "JavaScript", "React Native"],
-    description: "2019 年商业创业大赛二等奖",
-  },
-  {
-    id: "unlimitedstudy",
-    title: "UnlimitedStudy",
-    period: {
-      start: "01.2017",
-      end: "08.2018",
-    },
-    link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
-    skills: [
-      "全国竞赛",
-      "创意软件",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-      "jQuery",
-      "Bootstrap 3",
-    ],
-    description: `UnlimitedStudy 是一个为教师和学生提供教学和学习支持工具的网站。
-- 2018 年越南全国科学工程博览会三等奖（ViSEF）
-- 2018 年芹苴市科学工程博览会一等奖
-- 2018 年全国青年信息技术竞赛三等奖
-- 2018 年芹苴市青年与儿童创意竞赛二等奖
-- 2018 年芹苴市青年信息技术竞赛三等奖
-- 达到 7000 以上用户，主要为芹苴市高中生
-- 在芹苴市多所高中试点实施，包含英语测验，由芹苴市教育局英语专科教师监督`,
-  },
-  {
-    id: "dmessage",
-    title: "DMessage",
-    period: {
-      start: "05.2017",
-      end: "05.2017",
-    },
-    link: "https://github.com/ncdai/DMessage",
-    skills: [
-      "自学项目",
-      "个人项目",
-      "Express.js",
-      "Socket.io",
-      "MongoDB",
-      "Mongoose ODM",
-    ],
-    description:
-      "一个使用 Socket.IO 练习实时通信的Messenger克隆项目，展示了我在实现 WebSocket 即时通讯方面的自学历程。",
-  },
-  {
-    id: "study-english",
-    title: "学习英语",
-    period: {
-      start: "11.2016",
-      end: "12.2017",
-    },
-    link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
-    skills: [
-      "全国竞赛",
-      "创意软件",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-    ],
-    description: `Study English 是一个免费的、适合移动设备的高中生英语学习网站，提供词汇、测验、听力练习等功能。
-- 2016 年全国青年与儿童创意竞赛安慰奖
-- 2016 年芹苴市青年与儿童创意竞赛一等奖
-- 2016 年芹苴市青年信息技术竞赛安慰奖`,
+    description: `这是一个专为内容创作者设计的智能剪辑工具，无需复杂的剪辑软件知识，帮你自动完成粗剪工作。
+- 智能去废话：自动识别并剪除视频中的"呃"、"嗯"等语气词和静音片段。
+- 语义纠错：结合大模型 (如 GPT-4o, DeepSeek)，智能识别并剪掉口误重复的句子（需配置 API Key）。
+- 批量并发剪辑：支持选择文件夹，多线程并发处理多个视频，效率翻倍！
+- 智能无声剔除：批量模式下，自动检测并跳过没有音轨的视频，避免无效等待。
+- 自动字幕生成：剪辑同时生成配套的 .srt 字幕文件。`,
   },
 ]

@@ -54,11 +54,11 @@ export function CollapsibleList<T>({
             render={
               <Button className="gap-2 border-none px-3" size="sm">
                 <span className="hidden group-data-closed/collapsible:block">
-                  Show More
+                  展开
                 </span>
 
                 <span className="hidden group-data-open/collapsible:block">
-                  Show Less
+                  收起
                 </span>
 
                 <ChevronDownIcon className="group-data-open/collapsible:rotate-180" />

@@ -4,10 +4,10 @@ export type Project = {
   title: string
   /**
    * Project period for display and sorting.
-   * Use "MM.YYYY" format. Omit `end` for ongoing projects.
+   * Use "YYYY-MM-DD" format. Omit `end` for ongoing projects.
    */
   period: {
-    /** Start date (e.g., "05.2025"). */
+    /** Start date (e.g., "2025-05-01"). */
     start: string
     /** End date; leave undefined for "Present". */
     end?: string
